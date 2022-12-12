@@ -1,0 +1,13 @@
+name: behat-tests
+on: [push]
+  
+jobs:
+  run-behat-tests:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Setup PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '7.4'
+    - name: Composer install
+      run: composer install
